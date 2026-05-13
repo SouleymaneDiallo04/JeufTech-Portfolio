@@ -16,8 +16,10 @@ export default function PageContact({ goPage }: { goPage: (id: PageId) => void }
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
-      if (res.ok) setStatus('success')
-      else setStatus('error')
+      if (res.ok) {
+        setStatus('success')
+        setForm({ prenom: '', nom: '', email: '', telephone: '', sujet: '', message: '' })
+      } else setStatus('error')
     } catch {
       setStatus('error')
     }
