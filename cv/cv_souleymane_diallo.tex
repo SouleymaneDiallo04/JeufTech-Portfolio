@@ -1,0 +1,294 @@
+%=============================================================
+%  CV — SOULEYMANE DIALLO  |  Ingénieur IA & Data Scientist
+%  Compilé avec : pdflatex  (ou XeLaTeX)
+%=============================================================
+\documentclass[10pt, a4paper]{article}
+
+%--- Encodage & polices ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+%--- Mise en page ---
+\usepackage[a4paper, top=0.55in, bottom=0.55in, left=0.65in, right=0.65in]{geometry}
+\usepackage{parskip}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+
+%--- Couleurs ---
+\usepackage{xcolor}
+\definecolor{accent}{RGB}{15, 60, 130}      % bleu marine pro
+\definecolor{accentlight}{RGB}{220, 230, 248}
+\definecolor{muted}{RGB}{90, 90, 90}
+\definecolor{lightgray}{RGB}{240, 240, 240}
+
+%--- Listes ---
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.2em, itemsep=1.5pt, topsep=2pt, parsep=0pt}
+
+%--- Titres de section ---
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{accent}}
+  {}{0em}{}
+  [\vspace{-4pt}\color{accent}\rule{\linewidth}{0.6pt}\vspace{2pt}]
+\titlespacing{\section}{0pt}{10pt}{4pt}
+
+%--- Tableaux ---
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+
+%--- Liens ---
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks = true,
+  urlcolor   = accent,
+  linkcolor  = accent,
+  pdfauthor  = {Souleymane Diallo},
+  pdftitle   = {CV — Souleymane Diallo — Ingénieur IA \& Data Scientist}
+}
+
+%--- Pas de numéros de page ---
+\pagestyle{empty}
+
+%--- Commandes personnalisées ---
+% \expentry{Titre}{Org}{Date}
+\newcommand{\expentry}[3]{%
+  \textbf{\normalsize #1} \hfill {\small\color{muted}\textit{#3}}\\
+  {\small\color{accent}\textit{#2}}%
+}
+
+% \projentry{Titre}{Stack}{Lien}
+\newcommand{\projentry}[3]{%
+  \textbf{#1}%
+  \ifx\relax#3\relax\else
+    \ \ {\small\color{muted}$|$}\ \ {\small\href{#3}{\color{accent}\texttt{#3}}}%
+  \fi\\
+  {\small\color{muted}\textit{Stack :} #2}%
+}
+
+% Badge inline pour les skills
+\newcommand{\badge}[1]{%
+  \fbox{\small\texttt{#1}}%
+}
+
+%=============================================================
+\begin{document}
+%=============================================================
+
+%=============================================================
+%  EN-TÊTE
+%=============================================================
+\begin{center}
+  {\LARGE\bfseries\color{accent} SOULEYMANE DIALLO}\\[5pt]
+  {\normalsize\bfseries\color{muted}
+    Ingénieur IA \& Data Scientist \ $\cdot$ \ MLOps \ $\cdot$ \ NLP \& LLM \ $\cdot$ \ Full Stack}\\[6pt]
+  \small
+  \href{tel:+212669275436}{+212\ 06\ 69\ 27\ 54\ 36}
+  \enspace$\cdot$\enspace
+  \href{mailto:s.diallo@edu.umi.ac.ma}{s.diallo@edu.umi.ac.ma}
+  \enspace$\cdot$\enspace
+  Rabat, Maroc\\[3pt]
+  \href{https://www.linkedin.com/in/souleymane-diallo-51214728b/}{\texttt{linkedin.com/in/souleymane-diallo}}
+  \enspace$\cdot$\enspace
+  \href{https://github.com/SouleymaneDiallo04}{\texttt{github.com/SouleymaneDiallo04}}
+  \enspace$\cdot$\enspace
+  \href{https://jeuf-tech-portfolio.vercel.app/}{\texttt{jeuf-tech-portfolio.vercel.app}}
+\end{center}
+
+\vspace{-2pt}
+\noindent\color{accent}\rule{\linewidth}{1pt}
+\vspace{2pt}
+
+%=============================================================
+%  PROFIL
+%=============================================================
+\section{PROFIL}
+
+Élève-Ingénieur spécialisé en \textbf{Intelligence Artificielle \& Data Science} avec une expertise en Machine Learning, NLP, vision par ordinateur et développement Full Stack.
+Concepteur de \textbf{9 projets IA aboutis} — de la modélisation à la mise en production — intégrant des architectures avancées : RAG hybride, CNN-LSTM, Transformers, LLM locaux (Ollama), MLOps (Docker, MLflow, AWS).
+Disponible pour un \textbf{stage ou une alternance à partir de 2026}.
+
+%=============================================================
+%  EXPÉRIENCE PROFESSIONNELLE
+%=============================================================
+\section{EXPÉRIENCE PROFESSIONNELLE}
+
+\expentry{Stagiaire IA / Data Science — MLOps}
+         {Technocolabs Software Inc.}
+         {Août — Octobre 2025}
+
+\vspace{4pt}
+\begin{itemize}
+  \item Prétraitement de \textbf{50 000+ entrées} de startups avec PySpark : nettoyage, imputation, normalisation, encodage.
+  \item Développement de modèles de classification binaire et multi-classe (Random Forest, XGBoost, \textbf{LightGBM}, ExtraTrees) avec validation croisée et recherche d'hyperparamètres.
+  \item Feature engineering ayant amélioré de \textbf{+15\,\%} les scores par rapport aux features brutes.
+  \item Mise en production du pipeline via une \textbf{API Flask conteneurisée} (Docker) et déployée sur \textbf{AWS Elastic Beanstalk}.
+  \item \textbf{Résultats :} classification binaire à \textbf{90\,\%} de précision ; classification multi-classe à \textbf{95\,\%} avec approche hiérarchique.
+\end{itemize}
+\vspace{2pt}
+{\small\color{muted}\textit{Python, PySpark, Scikit-learn, LightGBM, XGBoost, Flask, Docker, AWS, Pandas, Git}}
+
+\vspace{8pt}
+
+\expentry{Développeur Web Full Stack — Freelance}
+         {JeüfTech}
+         {2024 — Présent}
+
+\vspace{4pt}
+\begin{itemize}
+  \item Conception et livraison de plateformes web : location/vente de voitures, e-commerce mode avec passerelle Stripe, dashboards d'administration.
+  \item Développement d'APIs REST (Django REST Framework, Node.js/Express) et déploiement sur Vercel, Fly.io et AWS.
+  \item \textbf{Résultats :} 100\,\% satisfaction client ; amélioration moyenne de \textbf{+40\,\%} des performances ; livraison systématique dans les délais.
+\end{itemize}
+\vspace{2pt}
+{\small\color{muted}\textit{React.js, Next.js, Node.js, Django, PostgreSQL, Tailwind CSS, Stripe, Vercel}}
+
+%=============================================================
+%  PROJETS
+%=============================================================
+\section{PROJETS PERSONNELS \& ACADÉMIQUES}
+
+% ── Projet 1 ──
+\projentry{Grenier Commun — Infrastructure Agricole Digitale d'Afrique de l'Ouest}
+          {Django · PostgreSQL · Redis · Meta NLLB-200 · Twilio · Railway}
+          {https://web-production-04b0a.up.railway.app}
+
+\vspace{4pt}
+\begin{itemize}
+  \item Plateforme intégrée de gestion post-récolte déployée en production, couvrant 5 espaces utilisateurs (agriculteur, gestionnaire de silo, acheteur, microfinance, admin).
+  \item Warrantage numérique : emprunt jusqu'à \textbf{70\,\% de la valeur du stock} + scoring crédit basé sur l'historique.
+  \item Chatbot IA contextuel avec \textbf{15 outils métier}, répondant nativement en \textbf{4 langues} (FR/EN/AR/Wolof via Meta NLLB-200).
+  \item Price Predictor IA hebdomadaire + notifications SMS multilingues via Twilio.
+\end{itemize}
+
+\vspace{6pt}
+
+% ── Projet 2 ──
+\projentry{Chatbot Documentaire Multimodal — Assistant IA Industriel QMS}
+          {Python · LangChain · FastAPI · Docker · Ollama · React}
+          {https://github.com/SouleymaneDiallo04/QMS\_Chatbot}
+
+\vspace{4pt}
+\begin{itemize}
+  \item Moteur \textbf{RAG hybride} (dense + lexical) anti-hallucination sur base documentaire industrielle dense.
+  \item Entrées multimodales (texte, voix, image scannée) ; réponses sourcées par document, page et paragraphe exacts.
+  \item Génération et vérification automatique de \textbf{FMEA}, préparation d'audits QMS, intégration SharePoint avec droits d'accès.
+  \item Couverture \textbf{trilingue FR/EN/AR}.
+\end{itemize}
+
+\vspace{6pt}
+
+% ── Projet 3 ──
+\projentry{PrognoSense — Maintenance Prédictive Industrielle par Analyse Vibratoire}
+          {Python · FastAPI · PyTorch · Scikit-learn · Scipy · React · SQLite}
+          {https://github.com/SouleymaneDiallo04/Plateforme-de-Maintenance-Predictive-Industrielle}
+
+\vspace{4pt}
+\begin{itemize}
+  \item Benchmark automatique de \textbf{5 architectures IA} pour la prédiction du Remaining Useful Life (RUL).
+  \item Détection d'anomalies non supervisée via \textbf{Autoencoder PyTorch} + analyse spectrale FFT.
+  \item Health Index continu avec 4 seuils sémantiques, alertes email imminentes ; Assistant Copilot génération de rapports.
+\end{itemize}
+
+\vspace{6pt}
+
+% ── Projet 4 ──
+\projentry{StockFlow — Gestion de Stock Industriel par IA}
+          {Django · LightGBM · Prophet · PyTorch · MLflow · Celery · HTMX · Plotly}
+          {https://github.com/SouleymaneDiallo04/StockFlow-Plateforme-Intelligente-de-Gestion-de-stock-Industriel}
+
+\vspace{4pt}
+\begin{itemize}
+  \item Optimisation par simulation \textbf{Monte-Carlo (10 000 scénarios)} ; classification \textbf{ABC-XYZ}.
+  \item Prévision multi-modèle (SARIMA, Prophet, LightGBM, TFT) orchestrée par \textbf{Celery} et suivie par \textbf{MLflow}.
+  \item Cartes de contrôle \textbf{SPC} (8 règles Western Electric) ; dashboard interactif Plotly/HTMX.
+\end{itemize}
+
+\vspace{6pt}
+
+% ── Projet 5 ──
+\projentry{Système de Surveillance Intelligent — Vision par Ordinateur}
+          {YOLOv5 · PyTorch · OpenCV · MediaPipe · CNN-LSTM · Streamlit}
+          {https://computer-vision2.readthedocs.io/en/latest/}
+
+\vspace{4pt}
+\begin{itemize}
+  \item Écosystème de \textbf{3 modèles IA} : détection de chutes temps réel (YOLOv5), détection de somnolence (analyse faciale MediaPipe), prédiction de chutes (CNN-LSTM).
+  \item Alertes instantanées pour personnes âgées et patients à risque.
+\end{itemize}
+
+%=============================================================
+%  COMPÉTENCES TECHNIQUES
+%=============================================================
+\section{COMPÉTENCES TECHNIQUES}
+
+\begin{tabularx}{\linewidth}{@{} l X @{}}
+  \textbf{ML / DL}
+    & PyTorch, TensorFlow, Keras, Scikit-learn, XGBoost, LightGBM, Prophet, SARIMA, Autoencoder \\[3pt]
+
+  \textbf{NLP \& LLM}
+    & LangChain, LangGraph, RAG hybride, Ollama (LLaMA\,3, Mistral), HuggingFace Transformers, BERT, NLLB-200, OpenAI API, fine-tuning \\[3pt]
+
+  \textbf{Computer Vision}
+    & YOLOv5, OpenCV, MediaPipe, CNN-LSTM \\[3pt]
+
+  \textbf{MLOps \& Cloud}
+    & Docker, Kubernetes, MLflow, Terraform, AWS (Elastic Beanstalk, EC2, S3), Azure, CI/CD, Railway, Vercel \\[3pt]
+
+  \textbf{Développement}
+    & Python, FastAPI, Django, React.js, Next.js, Spring Boot, Flutter, Node.js, SQL, PostgreSQL, Redis, Celery \\[3pt]
+
+  \textbf{Données \& BI}
+    & PySpark, Pandas, NumPy, Scipy, Plotly, HTMX, Jupyter, Streamlit, MLflow \\[3pt]
+
+  \textbf{Industriel}
+    & IoT, PLC, SCADA, Modbus, SPC, FMEA, Google OR-Tools, Génie Industriel \\[3pt]
+
+  \textbf{Outils}
+    & Git, Linux, Docker Compose, ReportLab, LaTeX
+\end{tabularx}
+
+%=============================================================
+%  FORMATION
+%=============================================================
+\section{FORMATION}
+
+\expentry{Diplôme d'Ingénieur — Intelligence Artificielle \& Data Science}
+         {ENSAM-Meknès}
+         {2021 — 2026 (en cours)}
+
+\vspace{3pt}
+
+{\small Formation de 5 ans : Machine Learning, Deep Learning, Big Data, MLOps, Génie Industriel \& Cyber-Physique, Systèmes embarqués. Projets industriels tout au long du cursus.}
+
+%=============================================================
+%  CERTIFICATIONS
+%=============================================================
+\section{CERTIFICATIONS}
+
+\begin{tabularx}{\linewidth}{@{} l l X r @{}}
+  2024 & \textbf{Machine Learning Specialization}     & DeepLearning.AI / Coursera  & \textit{98/100} \\
+  2024 & \textbf{NLP with Transformers}               & Hugging Face                & \textit{Mention Excellente} \\
+  2024 & \textbf{Google Data Analytics}               & Google / Coursera           & \textit{97/100} \\
+  2025 & \textbf{AWS Cloud Practitioner}              & Amazon Web Services         & \textit{890/1000} \\
+  2025 & \textbf{Docker \& Kubernetes}                & KodeKloud / Udemy           & \textit{Complété} \\
+\end{tabularx}
+
+%=============================================================
+%  LANGUES
+%=============================================================
+\section{LANGUES}
+
+\begin{tabularx}{\linewidth}{@{} X X X X @{}}
+  \textbf{Français} — Courant &
+  \textbf{Anglais} — B2+ (Courant) &
+  \textbf{Wolof} — Langue maternelle &
+  \textbf{Arabe} — Notions \\
+\end{tabularx}
+
+%=============================================================
+\end{document}
+%=============================================================
