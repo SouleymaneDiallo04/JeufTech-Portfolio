@@ -374,3 +374,109 @@ button{font-family:var(--fb)}
 .f-links{display:flex;gap:16px}
 .f-links a{color:var(--muted);text-decoration:none;transition:.15s}
 .f-links a:hover{color:var(--c1)}
+
+/* ══════════════════════════════════════
+   RESPONSIVE MOBILE  ≤ 768px
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* NAV */
+  .nav { padding: 0 16px; height: 56px; }
+  .nav-links { display: none; }
+  .nav-cta { padding: 7px 14px; font-size: 12px; }
+
+  /* HERO */
+  .hero { padding: 40px 16px 48px; min-height: auto; }
+  .hero-inner { grid-template-columns: 1fr; gap: 28px; }
+  .hero h1 { font-size: 34px; letter-spacing: -1px; }
+  .hero-av-wrap { width: 160px; height: 160px; }
+  .av-circle { width: 130px; height: 130px; }
+  .av-initials { font-size: 32px; }
+  .hero-desc { max-width: 100%; }
+  .hero-btns { flex-direction: column; }
+  .btn-pri, .btn-sec { width: 100%; justify-content: center; }
+
+  /* PAGE HERO */
+  .page-hero { padding: 36px 16px 28px; }
+  .sec-title { font-size: 26px; letter-spacing: -.5px; }
+  .sec-desc { font-size: 12px; }
+
+  /* SECTIONS */
+  .section { padding: 40px 16px; }
+
+  /* STATS */
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  .stat-item { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; }
+
+  /* ABOUT */
+  .about-grid { grid-template-columns: 1fr; }
+
+  /* SKILLS */
+  .skills-grid { grid-template-columns: 1fr; }
+
+  /* TABS */
+  .tabs-bar { overflow-x: auto; width: 100%; border-radius: 0; border-left: none; border-right: none; }
+  .tab-btn { padding: 10px 14px; font-size: 12px; }
+  .tab-pane { padding: 0 16px 40px; }
+  .tabs-outer { padding: 0; }
+
+  /* CERTIFICATIONS */
+  .certs-grid { grid-template-columns: 1fr; }
+
+  /* APROPOS */
+  .apropos-grid { grid-template-columns: 1fr; }
+  .langues-grid { grid-template-columns: 1fr 1fr; }
+
+  /* SERVICES */
+  .svc-grid { grid-template-columns: 1fr; }
+  .svc-cta { padding: 28px 16px; }
+  .svc-cta-btns { flex-direction: column; align-items: center; }
+
+  /* RÉALISATIONS */
+  .work-main-layout { grid-template-columns: 1fr !important; }
+  .filters-bar { padding: 0 16px; }
+  .proj-cards-grid { padding-left: 16px; padding-right: 16px; grid-template-columns: 1fr; }
+  .carousel-outer { padding-left: 16px; }
+  .proj-detail-panel { margin-right: 0; }
+
+  /* CONTACT */
+  .contact-section { padding-left: 16px; padding-right: 16px; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .form-2col { grid-template-columns: 1fr; }
+
+  /* VIZ */
+  .viz-grid { grid-template-columns: 1fr; }
+  .gh-grid { grid-template-columns: 1fr 1fr; }
+
+  /* FOOTER */
+  .footer { flex-direction: column; gap: 12px; text-align: center; padding: 16px; }
+  .f-links { flex-wrap: wrap; justify-content: center; gap: 12px; }
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE TABLETTE  769px – 1024px
+══════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .nav { padding: 0 24px; }
+  .nav-link { padding: 8px 12px; font-size: 13px; }
+
+  .hero { padding: 52px 24px 52px; }
+  .hero h1 { font-size: 42px; }
+  .hero-inner { grid-template-columns: 1fr 220px; gap: 28px; }
+
+  .page-hero { padding: 44px 24px 32px; }
+  .sec-title { font-size: 32px; }
+  .section { padding: 52px 24px; }
+
+  .stats-row { grid-template-columns: repeat(4, 1fr); }
+  .about-grid { grid-template-columns: 1fr 240px; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .svc-grid { grid-template-columns: 1fr 1fr; }
+  .certs-grid { grid-template-columns: 1fr 1fr; }
+  .contact-section { padding-left: 24px; padding-right: 24px; }
+  .contact-layout { grid-template-columns: 1fr 1.4fr; }
+  .footer { padding: 16px 24px; }
+}
