@@ -134,31 +134,13 @@ export default function PageHome({ goPage }: { goPage: (id: PageId) => void }) {
           <div className="hero-av-wrap">
             <div className="ring-spin" style={{width:240,height:240,borderWidth:1,borderColor:'rgba(139,69,19,.3)',animationDuration:'12s'}}/>
             <div className="ring-spin" style={{width:278,height:278,borderWidth:1,borderColor:'rgba(196,135,58,.18)',animationDuration:'18s',animationDirection:'reverse'}}/>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
- <div 
-  className="av-circle" 
-  style={{ 
-    width: '350px', 
-    height: '350px', 
-    borderRadius: '100%', 
-    overflow: 'hidden',
-    position: 'relative',
-    left: '-40px'    
-  }}
->
-  <img 
-    src="/profil.jpeg" 
-    alt="Souleymane Diallo"
-    style={{
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      objectPosition: 'top center',
-      borderRadius: '100%'
-    }} 
-  />
-</div>
-</div>
+            <div className="av-circle">
+              <img
+                src="/profil.jpeg"
+                alt="Souleymane Diallo"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', borderRadius: '100%' }}
+              />
+            </div>
           </div>
         </div>
       </section>
