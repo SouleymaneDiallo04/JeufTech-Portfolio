@@ -401,9 +401,10 @@ button{font-family:var(--fb)}
   .hero { padding: 40px 16px 48px; min-height: auto; }
   .hero-inner { grid-template-columns: 1fr; gap: 28px; }
   .hero h1 { font-size: 34px; letter-spacing: -1px; }
-  .hero-av-wrap { width: 160px; height: 160px; }
+  .hero-av-wrap { width: 160px; height: 160px; overflow: hidden; }
   .av-circle { width: 130px; height: 130px; }
   .av-initials { font-size: 32px; }
+  .ring-spin { display: none; }
   .hero-desc { max-width: 100%; }
   .hero-btns { flex-direction: column; }
   .btn-pri, .btn-sec { width: 100%; justify-content: center; }
