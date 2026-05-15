@@ -1,5 +1,20 @@
 import type { Metadata, Viewport } from 'next'
+import { Syne, DM_Sans } from 'next/font/google'
 import './globals.css'
+
+const syne = Syne({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  variable: '--font-syne',
+  display: 'swap',
+})
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  variable: '--font-dm',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Souleymane Diallo — AI Engineer & Data Scientist',
@@ -19,7 +34,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={`${syne.variable} ${dmSans.variable}`}>
       <body>{children}</body>
     </html>
   )
