@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { PageId } from '@/app/page'
 import { services } from '@/lib/data'
+import { useIsMobile } from '@/lib/hooks'
 
 // Couleurs exactes du HTML (vert de SouleCode = rgba(0,230,118,...))
 const TECH_COLORS = [
@@ -125,6 +126,7 @@ function SvcCard({ svc }: { svc: typeof services[0] }) {
 }
 
 export default function PageServices({ goPage }: { goPage: (id: PageId) => void }) {
+  const isMobile = useIsMobile()
   return (
     <>
       <div className="page-hero">
@@ -133,10 +135,9 @@ export default function PageServices({ goPage }: { goPage: (id: PageId) => void 
         <p className="sec-desc">De la conception à la mise en production, je vous accompagne dans tous vos projets technologiques avec une expertise complète et une approche innovante.</p>
         <div className="sec-line"/>
       </div>
-      <div style={{height:32}}/>
-      {/* max-width 1000px centré */}
-      <div style={{padding:'0 44px 32px', maxWidth:1000, margin:'0 auto'}}>
-        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:20}}>
+      <div style={{height:isMobile ? 16 : 32}}/>
+      <div style={{padding: isMobile ? '0 16px 24px' : '0 44px 32px', maxWidth:1000, margin:'0 auto'}}>
+        <div style={{display:'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 14 : 20}}>
           {services.map(svc => <SvcCard key={svc.num} svc={svc} />)}
         </div>
         <div className="svc-cta" style={{marginTop:32}}>

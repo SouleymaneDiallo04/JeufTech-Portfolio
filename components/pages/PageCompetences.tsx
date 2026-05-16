@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import { PageId } from '@/app/page'
+import { useIsMobile } from '@/lib/hooks'
 
 /* ══ LOGOS SVG 18px — identiques SouleCode ══ */
 const PY = () => <svg width="18" height="18" viewBox="0 0 256 255" style={{flexShrink:0}}><defs><linearGradient id="py1" x1="12.959" y1="12.042" x2="169.086" y2="169.085" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#387EB8"/><stop offset="1" stopColor="#366994"/></linearGradient><linearGradient id="py2" x1="84.452" y1="84.44" x2="252.076" y2="252.075" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#FFE052"/><stop offset="1" stopColor="#FFC331"/></linearGradient></defs><path fill="url(#py1)" d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072z"/><path fill="url(#py2)" d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897z"/></svg>
@@ -276,6 +277,7 @@ export default function PageCompetences({ goPage }: { goPage: (id: PageId) => vo
   const [tab, setTab] = useState<TabId>('exp')
   const [activeBars, setActiveBars] = useState(false)
   const [lightbox, setLightbox] = useState<{title:string;file:string}|null>(null)
+  const isMobile = useIsMobile()
 
   /* Animation barres : reset + trigger à CHAQUE clic sur l'onglet Compétences */
   function handleTabClick(id: TabId) {
@@ -301,7 +303,7 @@ export default function PageCompetences({ goPage }: { goPage: (id: PageId) => vo
       <div style={{height:28}}/>
 
       {/* TABS BAR — centrée */}
-      <div style={{display:'flex',justifyContent:'center',padding:'0 44px'}}>
+      <div style={{display:'flex',justifyContent:'center',padding: isMobile ? '0 8px' : '0 44px'}}>
         <div className="tabs-bar">
           {tabs.map(t => (
             <button key={t.id} className={`tab-btn${tab===t.id?' active':''}`} onClick={() => handleTabClick(t.id)} style={{ fontSize: '16px', fontWeight: 600 }} >
@@ -316,7 +318,7 @@ export default function PageCompetences({ goPage }: { goPage: (id: PageId) => vo
         <div className="tab-pane active">
           <div className="pane-title" style={{textAlign:"center"}}>Mon Expérience</div>
           <p className="pane-sub" style={{textAlign:"center"}}>Avec 3 années d'expérience dans le domaine des technologies de l'information, j'ai eu l'opportunité de travailler sur des projets variés et stimulants.</p>
-          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:20,maxWidth:1150,margin:"0 auto"}}>
+          <div style={{display:"grid",gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",gap: isMobile ? 14 : 20,maxWidth:1150,margin:"0 auto"}}>
             {experiences.map((exp,i) => <ExpCard key={i} exp={exp} />)}
           </div>
         </div>
@@ -328,7 +330,7 @@ export default function PageCompetences({ goPage }: { goPage: (id: PageId) => vo
     <div className="pane-title" style={{textAlign:"center"}}>Ma Formation</div>
     <p className="pane-sub" style={{textAlign:"center"}}>Un parcours académique solide en mathématiques et ingénierie, orienté vers l'intelligence artificielle.</p>
     <div style={{maxWidth:1000, margin:'0 auto'}}>
-      <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:20}}>
+      <div style={{display:'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 14 : 20}}>
         {formations.map((f, i) => (
           <div key={i} style={{
             background: 'var(--card)',
@@ -437,7 +439,7 @@ export default function PageCompetences({ goPage }: { goPage: (id: PageId) => vo
               <h3 style={{fontFamily:'var(--ff)',fontSize:20,fontWeight:800,textAlign:'center',color:d.color,marginBottom:20}}>{d.domain}</h3>
 
               {/* Grille 2 colonnes — cartes comme la capture */}
-              <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16,maxWidth:1000,margin:'0 auto'}}>
+              <div style={{display:'grid',gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',gap: isMobile ? 12 : 16,maxWidth:1000,margin:'0 auto'}}>
                 {d.certs.map((cert,ci) => (
                   <div key={ci} style={{
                     background:'var(--card)',border:'1px solid var(--borderx)',
@@ -521,7 +523,7 @@ export default function PageCompetences({ goPage }: { goPage: (id: PageId) => vo
     </p>
     <p className="pane-sub" style={{textAlign:"center",maxWidth:780,margin:'0 auto 36px'}}> N'hésitez pas à me rejoindre dans cette aventure excitante où la collaboration et l'innovation redéfinissent les limites du possible.</p>
 
-    <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:16, maxWidth:940, margin:'0 auto'}}>
+    <div style={{display:'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 12 : 16, maxWidth:940, margin:'0 auto'}}>
       {[
         { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>, label:'Nom', value:'Souleymane DIALLO' },
         { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>, label:"Téléphone", value:'0669275436' },
