@@ -3,6 +3,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import Image from 'next/image'
 import { PageId } from '@/app/page'
 import { projets } from '@/lib/data'
+import { useIsMobile } from '@/lib/hooks'
 
 type Cat = 'all' | 'ia-web' | 'ia-mobile' | 'fullstack' | 'mobile' | 'ia-desktop'
 type Layout = 'grid' | 'carousel'
@@ -71,6 +72,7 @@ const IconCarousel = () => (
 )
 
 export default function PageRealisations({ goPage }: { goPage: (id: PageId) => void }) {
+  const isMobile = useIsMobile()
   const [cat, setCat] = useState<Cat>('all')
   const [selectedIdx, setSelectedIdx] = useState(0)
   const [layout, setLayout] = useState<Layout>('grid')
@@ -340,7 +342,7 @@ export default function PageRealisations({ goPage }: { goPage: (id: PageId) => v
         </div>
 
         {/* ── STATS ── */}
-        <div className="stats-row" style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid var(--border)', maxWidth: 1200, margin: '120px auto 0' }}>
+        <div className="stats-row" style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid var(--border)', maxWidth: 1200, margin: `${isMobile ? 40 : 120}px auto 0` }}>
           <div className="stat-item"><div className="stat-n">11</div><div className="stat-l">Projets réalisés</div></div>
           <div className="stat-item"><div className="stat-n">32</div><div className="stat-l">Technologies</div></div>
           <div className="stat-item"><div className="stat-n">10</div><div className="stat-l">Projets livrés</div></div>
@@ -349,7 +351,7 @@ export default function PageRealisations({ goPage }: { goPage: (id: PageId) => v
       </div>
 
       {/* ── CTA ── */}
-      <div style={{ padding: '25px 44px 56px' }}>
+      <div style={{ padding: isMobile ? '20px 16px 40px' : '25px 44px 56px' }}>
         <div className="svc-cta">
           <h3>Prêt à démarrer votre projet ?</h3>
           <p>Discutons de vos besoins et trouvons ensemble la solution technologique adaptée à vos objectifs.</p>

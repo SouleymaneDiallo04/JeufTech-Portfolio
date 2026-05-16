@@ -1,8 +1,10 @@
 'use client'
 import { useState } from 'react'
 import { PageId } from '@/app/page'
+import { useIsMobile } from '@/lib/hooks'
 
 export default function PageContact({ goPage }: { goPage: (id: PageId) => void }) {
+  const isMobile = useIsMobile()
   const [form, setForm] = useState({ prenom: '', nom: '', email: '', telephone: '', sujet: '', message: '' })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -155,14 +157,14 @@ export default function PageContact({ goPage }: { goPage: (id: PageId) => void }
         </div>
       </div>
       {/* CTA BAS DE PAGE */}
-      <div style={{ padding: '0 80px 60px' }}>
+      <div style={{ padding: isMobile ? '0 16px 40px' : '0 80px 60px' }}>
         <div style={{
           maxWidth: 1100,
           margin: '0 auto',
           background: 'linear-gradient(135deg, rgba(139,69,19,.12) 0%, rgba(196,135,58,.08) 50%, rgba(139,69,19,.06) 100%)',
           border: '1px solid rgba(139,69,19,.25)',
           borderRadius: 20,
-          padding: '52px 40px',
+          padding: isMobile ? '32px 20px' : '52px 40px',
           textAlign: 'center',
           position: 'relative',
           overflow: 'hidden',
@@ -175,7 +177,7 @@ export default function PageContact({ goPage }: { goPage: (id: PageId) => void }
             pointerEvents: 'none',
           }} />
           <h3 style={{
-            fontFamily: 'var(--ff)', fontSize: 26, fontWeight: 800,
+            fontFamily: 'var(--ff)', fontSize: isMobile ? 20 : 26, fontWeight: 800,
             letterSpacing: '-.4px', marginBottom: 12, color: 'var(--text)',
           }}>
             Prêt à commencer ?
