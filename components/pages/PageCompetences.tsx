@@ -302,8 +302,8 @@ export default function PageCompetences({ goPage }: { goPage: (id: PageId) => vo
       </div>
       <div style={{height:28}}/>
 
-      {/* TABS BAR — centrée */}
-      <div style={{display:'flex',justifyContent:'center',padding: isMobile ? '0 8px' : '0 44px'}}>
+      {/* TABS BAR — scroll horizontal sur mobile */}
+      <div className="tabs-scroll-wrap">
         <div className="tabs-bar">
           {tabs.map(t => (
             <button key={t.id} className={`tab-btn${tab===t.id?' active':''}`} onClick={() => handleTabClick(t.id)} style={{ fontSize: '16px', fontWeight: 600 }} >
@@ -553,7 +553,7 @@ export default function PageCompetences({ goPage }: { goPage: (id: PageId) => vo
           </div>
           <div>
             <div style={{fontSize:12, color:'var(--muted2)', marginBottom:4}}>{label}</div>
-            <div style={{fontSize:14, fontWeight:700, color:'var(--text)', fontFamily:'var(--fb)'}}>{value}</div>
+            <div style={{fontSize:14, fontWeight:700, color:'var(--text)', fontFamily:'var(--fb)', wordBreak:'break-all', overflowWrap:'anywhere'}}>{value}</div>
           </div>
         </div>
       ))}

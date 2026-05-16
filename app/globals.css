@@ -182,6 +182,7 @@ button{font-family:var(--fb)}
 
 /* TABS */
 .tabs-outer{padding:0 44px}
+.tabs-scroll-wrap{display:flex;justify-content:center;padding:0 44px}
 .tabs-bar{display:inline-flex;background:var(--card);border:1px solid var(--borderx);border-radius:10px;overflow:hidden;margin-bottom:32px}
 .tab-btn{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted2);padding:12px 20px;cursor:pointer;border:none;background:transparent;font-family:var(--fb);transition:.15s;border-bottom:2px solid transparent;white-space:nowrap}
 .tab-btn:hover{color:var(--text);background:rgba(139,69,19,.04)}
@@ -400,7 +401,7 @@ button{font-family:var(--fb)}
   /* HERO */
   .hero { padding: 36px 16px 40px; min-height: auto; overflow-x: hidden; overflow-y: visible; }
   .hero-inner { grid-template-columns: 1fr; gap: 24px; align-items: start; }
-  .hero h1 { font-size: 32px; letter-spacing: -1px; word-break: break-word; }
+  .hero h1 { font-size: clamp(22px, 7vw, 28px); letter-spacing: -.5px; word-break: break-word; }
   .hero-av-wrap { width: 140px; height: 140px; overflow: hidden; }
   .av-circle { width: 120px; height: 120px; }
   .av-initials { font-size: 32px; }
@@ -433,11 +434,35 @@ button{font-family:var(--fb)}
   /* SKILLS */
   .skills-grid { grid-template-columns: 1fr; }
 
-  /* TABS */
-  .tabs-bar { overflow-x: auto; width: 100%; border-radius: 0; border-left: none; border-right: none; }
-  .tab-btn { padding: 10px 14px; font-size: 12px; }
+  /* TABS — scroll horizontal natif */
+  .tabs-scroll-wrap {
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    padding: 0 16px;
+  }
+  .tabs-scroll-wrap::-webkit-scrollbar { display: none; }
+  .tabs-bar {
+    display: flex;
+    width: max-content;
+    overflow: visible;
+    border-radius: 10px;
+    border: 1px solid var(--borderx);
+    margin-bottom: 20px;
+  }
+  .tab-btn { padding: 10px 12px; font-size: 11px; gap: 5px; }
+  .tab-ico { width: 20px; height: 20px; font-size: 0; }
+  .tab-ico svg { width: 14px; height: 14px; }
   .tab-pane { padding: 0 16px 40px; }
   .tabs-outer { padding: 0; }
+
+  /* CONTACT — overflow email & textes longs */
+  .contact-card { padding: 18px 14px; }
+  .contact-form { padding: 18px 14px; }
+  .c-item-val { word-break: break-all; overflow-wrap: anywhere; font-size: 12px; }
+  .c-item { gap: 10px; padding: 10px 8px; }
 
   /* CERTIFICATIONS */
   .certs-grid { grid-template-columns: 1fr; }
