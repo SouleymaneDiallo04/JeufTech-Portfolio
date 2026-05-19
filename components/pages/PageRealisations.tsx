@@ -343,7 +343,7 @@ export default function PageRealisations({ goPage }: { goPage: (id: PageId) => v
 
         {/* ── STATS ── */}
         <div className="stats-row" style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid var(--border)', maxWidth: 1200, margin: `${isMobile ? 40 : 120}px auto 0` }}>
-          <div className="stat-item"><div className="stat-n">11</div><div className="stat-l">Projets réalisés</div></div>
+          <div className="stat-item"><div className="stat-n">12</div><div className="stat-l">Projets réalisés</div></div>
           <div className="stat-item"><div className="stat-n">32</div><div className="stat-l">Technologies</div></div>
           <div className="stat-item"><div className="stat-n">10</div><div className="stat-l">Projets livrés</div></div>
           <div className="stat-item"><div className="stat-n">34</div><div className="stat-l">Mois d'expérience</div></div>
