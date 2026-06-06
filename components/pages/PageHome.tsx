@@ -136,20 +136,13 @@ export default function PageHome({ goPage }: { goPage: (id: PageId) => void }) {
           {/* AVATAR */}
           <div className="hero-av-wrap">
             <div className="av-glow"/>
-            <div className="ring-spin" style={{width:400,height:400,borderWidth:1,borderColor:'rgba(139,69,19,.3)',animationDuration:'12s'}}/>
-            <div className="ring-spin" style={{width:438,height:438,borderWidth:1,borderColor:'rgba(196,135,58,.18)',animationDuration:'18s',animationDirection:'reverse'}}/>
+            <div className="av-sweep"/>
             <div className="av-circle">
               <img
                 src="/profil.jpeg"
                 alt="Souleymane Diallo"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 22%', borderRadius: '100%' }}
               />
-            </div>
-            <div className="av-orbit">
-              <span className="av-orbit-item" style={{top:0,left:200}}>🤖</span>
-              <span className="av-orbit-item" style={{top:200,left:400}}>📊</span>
-              <span className="av-orbit-item" style={{top:400,left:200}}>💬</span>
-              <span className="av-orbit-item" style={{top:200,left:0}}>🐍</span>
             </div>
           </div>
         </div>

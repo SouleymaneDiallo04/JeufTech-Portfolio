@@ -103,9 +103,8 @@ button{font-family:var(--fb)}
 /* halo pulsé derrière la photo */
 .av-glow{position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(196,135,58,.30),transparent 70%);z-index:1;animation:avPulse 3.5s ease-in-out infinite;pointer-events:none}
 @keyframes avPulse{0%,100%{transform:scale(1);opacity:.55}50%{transform:scale(1.12);opacity:.85}}
-/* carrousel d'icônes en orbite autour de la photo */
-.av-orbit{position:absolute;width:440px;height:440px;z-index:4;pointer-events:none;animation:spinR 26s linear infinite}
-.av-orbit-item{position:absolute;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:21px;border-radius:50%;background:var(--card);border:1px solid var(--borderx);box-shadow:0 6px 18px rgba(139,69,19,.16);animation:spinR 26s linear infinite reverse}
+/* anneau dégradé doré avec reflet qui glisse autour de la photo */
+.av-sweep{position:absolute;width:388px;height:388px;border-radius:50%;background:conic-gradient(from 0deg,rgba(196,135,58,.16) 0deg,rgba(196,135,58,.10) 170deg,rgba(196,135,58,.30) 290deg,rgba(247,238,224,.92) 350deg,rgba(196,135,58,.30) 360deg);-webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 calc(100% - 3px));z-index:3;pointer-events:none;animation:spinR 6.5s linear infinite}
 
 /* STATS */
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2)}
@@ -412,7 +411,7 @@ button{font-family:var(--fb)}
   .av-circle { width: 120px; height: 120px; }
   .av-initials { font-size: 32px; }
   .ring-spin { display: none; }
-  .av-orbit, .av-glow { display: none; }
+  .av-glow, .av-sweep { display: none; }
   .hero-desc { max-width: 100%; word-break: break-word; overflow-wrap: break-word; font-size: 12px; }
   .hero-greeting { font-size: 15px; }
   .hero-avail { font-size: 11px; }
