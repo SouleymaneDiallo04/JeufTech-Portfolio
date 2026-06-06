@@ -69,7 +69,7 @@ button{font-family:var(--fb)}
 .hero::before{content:'';position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(139,69,19,.07),transparent 65%);pointer-events:none}
 .hero::after{content:'';position:absolute;left:-80px;bottom:-80px;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(196,135,58,.06),transparent 65%);pointer-events:none}
 .hero-grid-lines{position:absolute;inset:0;opacity:.04;background-image:linear-gradient(rgba(139,69,19,1) 1px,transparent 1px),linear-gradient(90deg,rgba(139,69,19,1) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
-.hero-inner{display:grid;grid-template-columns:1fr 440px;gap:44px;align-items:center;position:relative;z-index:1}
+.hero-inner{display:grid;grid-template-columns:1fr 480px;gap:44px;align-items:center;position:relative;z-index:1}
 .hero-avail{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(139,69,19,.3);color:var(--c1);font-size:12px;padding:6px 16px;border-radius:20px;margin-bottom:24px;background:rgba(139,69,19,.06)}
 .avail-dot{width:7px;height:7px;background:var(--c1);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
@@ -93,8 +93,8 @@ button{font-family:var(--fb)}
 .soc:hover{border-color:var(--border2);color:var(--c1)}
 
 /* AVATAR */
-.hero-av-wrap{display:flex;align-items:center;justify-content:center;position:relative;width:400px;height:400px;margin:0 auto;transform:translateX(-40px)}
-.av-circle{width:320px;height:320px;border-radius:50%;background:linear-gradient(135deg,#EDE8DC,#F5F0E8);border:2px solid rgba(139,69,19,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:2;overflow:hidden}
+.hero-av-wrap{display:flex;align-items:center;justify-content:center;position:relative;width:440px;height:440px;margin:0 auto;transform:translateX(-40px)}
+.av-circle{width:360px;height:360px;border-radius:50%;background:linear-gradient(135deg,#EDE8DC,#F5F0E8);border:2px solid rgba(139,69,19,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:2;overflow:hidden}
 .av-circle::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 30%,rgba(139,69,19,.08),transparent 60%)}
 .av-initials{font-family:var(--ff);font-size:48px;font-weight:800;color:var(--c1);position:relative;z-index:1}
 .av-sub{font-size:9px;color:var(--muted2);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;position:relative;z-index:1}
