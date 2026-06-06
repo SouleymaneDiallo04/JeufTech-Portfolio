@@ -108,7 +108,10 @@ export default function PageHome({ goPage }: { goPage: (id: PageId) => void }) {
               Passionné par l'intelligence artificielle et ses applications innovantes, je conçois des solutions digitales performantes qui allient <span className="hl1">robustesse technique</span> et <span className="hl2">élégance design</span>. Mon expertise couvre l'ensemble du cycle de développement, de la conception à la mise en production.
             </p>
             <div className="hero-btns">
-              <button className="btn-pri" onClick={() => window.open('/souley.pdf', '_blank')}>⬇ Télécharger mon CV</button>
+              <button className="btn-pri" onClick={() => window.open('/souley.pdf', '_blank')}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Télécharger mon CV
+              </button>
               <button className="btn-sec" onClick={() => goPage('realisations')}>Voir mes projets →</button>
             </div>
             <div className="hero-socials">
