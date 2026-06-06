@@ -135,8 +135,8 @@ export default function PageHome({ goPage }: { goPage: (id: PageId) => void }) {
           </div>
           {/* AVATAR */}
           <div className="hero-av-wrap">
-            <div className="ring-spin" style={{width:240,height:240,borderWidth:1,borderColor:'rgba(139,69,19,.3)',animationDuration:'12s'}}/>
-            <div className="ring-spin" style={{width:278,height:278,borderWidth:1,borderColor:'rgba(196,135,58,.18)',animationDuration:'18s',animationDirection:'reverse'}}/>
+            <div className="ring-spin" style={{width:300,height:300,borderWidth:1,borderColor:'rgba(139,69,19,.3)',animationDuration:'12s'}}/>
+            <div className="ring-spin" style={{width:338,height:338,borderWidth:1,borderColor:'rgba(196,135,58,.18)',animationDuration:'18s',animationDirection:'reverse'}}/>
             <div className="av-circle">
               <img
                 src="/profil.jpeg"

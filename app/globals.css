@@ -93,8 +93,8 @@ button{font-family:var(--fb)}
 .soc:hover{border-color:var(--border2);color:var(--c1)}
 
 /* AVATAR */
-.hero-av-wrap{display:flex;align-items:center;justify-content:center;position:relative;width:280px;height:280px;margin:0 auto}
-.av-circle{width:200px;height:200px;border-radius:50%;background:linear-gradient(135deg,#EDE8DC,#F5F0E8);border:2px solid rgba(139,69,19,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:2;overflow:hidden}
+.hero-av-wrap{display:flex;align-items:center;justify-content:center;position:relative;width:340px;height:340px;margin:0 auto}
+.av-circle{width:260px;height:260px;border-radius:50%;background:linear-gradient(135deg,#EDE8DC,#F5F0E8);border:2px solid rgba(139,69,19,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:2;overflow:hidden}
 .av-circle::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 30%,rgba(139,69,19,.08),transparent 60%)}
 .av-initials{font-family:var(--ff);font-size:48px;font-weight:800;color:var(--c1);position:relative;z-index:1}
 .av-sub{font-size:9px;color:var(--muted2);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;position:relative;z-index:1}
