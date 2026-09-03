@@ -94,7 +94,7 @@ const experiences = [
   title: "Ingénieur Full Stack & Generative AI – Plateforme SaaS B2B de Prospection Commerciale Augmentée par l'IA",
   titleSize: 16,
   org: '3LM Solutions',
-  location: 'Tunisie (à distance)',
+  location: 'Tunisie (Remote)',
   desc: "Conception et développement d'une plateforme web B2B qui transforme les 15 millions d'entreprises du registre public français en un outil de prospection commerciale, doté d'une IA générative pour les résumés et argumentaires de vente et d'une recommandation intelligente d'entreprises similaires.",
   missions: [
     "Développement intégral de la plateforme : API back-end (Laravel / PHP) et application front-end (React, TypeScript), avec authentification, double authentification (2FA) et permissions par rôle (administrateur / manager / commercial).",
@@ -121,8 +121,8 @@ const experiences = [
   dotColor: 'var(--c1)',
   title: 'Stagiaire IA / Data Science - MLOps',
   org: 'Technocolabs Software Inc.',
-  location: 'Inde (à distance)',
-  desc: 'Prédiction de la trajectoire des startups – pipeline ML complet, de la data au déploiement.',
+  location: 'Inde (Remote)',
+  desc: "Développement d'un système de machine learning prédisant la trajectoire de réussite de plus de 50 000 startups. Le projet a couvert tout le cycle, depuis le traitement de données massives avec PySpark et l'ingénierie de variables jusqu'à l'entraînement et l'optimisation de plusieurs modèles de classification, puis leur mise en production sous forme d'API conteneurisée déployée sur le cloud (AWS).",
   missions: [
     'Prétraitement de données massives avec PySpark : nettoyage, gestion des manquants, normalisation et encodage sur plus de 50 000 startups.',
     'Analyse exploratoire (EDA) univariée, bivariée et multivariée pour identifier les facteurs clés du succès.',
