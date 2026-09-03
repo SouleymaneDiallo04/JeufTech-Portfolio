@@ -63,6 +63,7 @@ const experiences = [
   date: 'Juillet — Aout 2026',
   dotColor: 'var(--c1)',
   title: "Ingénieur Full Stack & Generative AI – Plateforme SaaS B2B de Prospection Commerciale Augmentée par l'IA",
+  titleSize: 15,
   org: '3LM Solutions — Tunis (à distance)',
   desc: "Conception et développement d'une plateforme web B2B qui transforme les 15 millions d'entreprises du registre public français en un outil de prospection commerciale, doté d'une IA générative pour les résumés et argumentaires de vente et d'une recommandation intelligente d'entreprises similaires.",
   missions: [
@@ -172,7 +173,7 @@ function ExpCard({ exp }: { exp: typeof experiences[0] }) {
       </div>
 
       {/* TITRE (avec marge supérieure pour descendre) */}
-      <div style={{fontFamily:'var(--ff)',fontSize:18,fontWeight:800,marginBottom:6,marginTop:8,color:exp.type==='Stage'||exp.type==='Freelance'?'var(--c1)':'var(--text)'}}>
+      <div style={{fontFamily:'var(--ff)',fontSize:(exp as any).titleSize ?? 18,fontWeight:800,marginBottom:6,marginTop:8,color:exp.type==='Stage'||exp.type==='Freelance'?'var(--c1)':'var(--text)'}}>
         {exp.title}
       </div>
 
