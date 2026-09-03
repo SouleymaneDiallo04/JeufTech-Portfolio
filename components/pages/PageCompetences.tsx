@@ -37,7 +37,8 @@ const experiences = [
   date: 'Sept. 2026 — présent',
   dotColor: 'var(--c1)',
   title: 'Agentic AI & Industrial Design Engineer',
-  org: 'SigmaXis Consulting — Tanger',
+  org: 'SigmaXis Consulting',
+  location: 'Tanger, Maroc',
   desc: "AiThinkDesign réinvente la conception de produits industriels : une équipe d'agents IA reproduit à elle seule le travail d'un bureau d'études pluridisciplinaire et mène une simple idée jusqu'à un produit prêt à fabriquer, cahier des charges professionnel et prototype 3D réel compris. Des semaines de travail d'experts condensées en une seule session, sans jamais retirer à l'humain la décision finale.",
   missions: [
     "Transformer une idée floue en produit abouti : la plateforme déroule automatiquement toutes les étapes, de la compréhension du besoin jusqu'au dossier technique final.",
@@ -65,6 +66,7 @@ const experiences = [
   dotColor: 'var(--c1)',
   title: 'Stagiaire Ingénieur R&D - IA Embarquée, IoT & Data Science',
   org: 'Smart Digital Systems',
+  location: 'Oujda, Maroc',
   desc: "Conception de systèmes intelligents de bout en bout, du capteur physique au modèle validé, au service de l'agriculture de précision et du contrôle qualité agroalimentaire. Un stage à forte dimension recherche appliquée, combinant instrumentation, IA embarquée sur microcontrôleur et science des données.",
   missions: [
     "Conception et Fiabilisation d'un pipeline de calcul d'évapotranspiration de référence (ETo, FAO-56 Penman-Monteith) et modélisation du rayonnement solaire à partir de capteurs bas coût (lux, UV, température) pour le pilotage de l'irrigation.",
@@ -91,7 +93,8 @@ const experiences = [
   dotColor: 'var(--c1)',
   title: "Ingénieur Full Stack & Generative AI – Plateforme SaaS B2B de Prospection Commerciale Augmentée par l'IA",
   titleSize: 16,
-  org: '3LM Solutions — Tunis (à distance)',
+  org: '3LM Solutions',
+  location: 'Tunis, Tunisie (à distance)',
   desc: "Conception et développement d'une plateforme web B2B qui transforme les 15 millions d'entreprises du registre public français en un outil de prospection commerciale, doté d'une IA générative pour les résumés et argumentaires de vente et d'une recommandation intelligente d'entreprises similaires.",
   missions: [
     "Développement intégral de la plateforme : API back-end (Laravel / PHP) et application front-end (React, TypeScript), avec authentification, double authentification (2FA) et permissions par rôle (administrateur / manager / commercial).",
@@ -118,6 +121,7 @@ const experiences = [
   dotColor: 'var(--c1)',
   title: 'Stagiaire IA / Data Science - MLOps',
   org: 'Technocolabs Software Inc.',
+  location: 'Inde (à distance)',
   desc: 'Prédiction de la trajectoire des startups – pipeline ML complet, de la data au déploiement.',
   missions: [
     'Prétraitement de données massives avec PySpark : nettoyage, gestion des manquants, normalisation et encodage sur plus de 50 000 startups.',
@@ -205,9 +209,17 @@ function ExpCard({ exp }: { exp: typeof experiences[0] }) {
       </div>
 
       {/* ORG */}
-      <div style={{display:'flex',alignItems:'center',gap:7,marginBottom:10,fontSize:13,color:'var(--muted2)'}}>
-        <span style={{width:7,height:7,borderRadius:'50%',background:exp.dotColor,display:'inline-block',flexShrink:0}}/>
-        {exp.org}
+      <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:7,marginBottom:10,fontSize:13,color:'var(--muted2)'}}>
+        <span style={{display:'flex',alignItems:'center',gap:7,minWidth:0}}>
+          <span style={{width:7,height:7,borderRadius:'50%',background:exp.dotColor,display:'inline-block',flexShrink:0}}/>
+          {exp.org}
+        </span>
+        {(exp as any).location && (
+          <span style={{display:'flex',alignItems:'center',gap:5,flexShrink:0,color:'var(--muted)'}}>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            {(exp as any).location}
+          </span>
+        )}
       </div>
 
       {/* DESC */}
