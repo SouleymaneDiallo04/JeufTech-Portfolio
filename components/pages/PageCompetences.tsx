@@ -94,7 +94,7 @@ const experiences = [
   title: "Ingénieur Full Stack & Generative AI – Plateforme SaaS B2B de Prospection Commerciale Augmentée par l'IA",
   titleSize: 16,
   org: '3LM Solutions',
-  location: 'Tunis, Tunisie (à distance)',
+  location: 'Tunisie (à distance)',
   desc: "Conception et développement d'une plateforme web B2B qui transforme les 15 millions d'entreprises du registre public français en un outil de prospection commerciale, doté d'une IA générative pour les résumés et argumentaires de vente et d'une recommandation intelligente d'entreprises similaires.",
   missions: [
     "Développement intégral de la plateforme : API back-end (Laravel / PHP) et application front-end (React, TypeScript), avec authentification, double authentification (2FA) et permissions par rôle (administrateur / manager / commercial).",
