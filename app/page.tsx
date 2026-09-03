@@ -7,7 +7,6 @@ import PageServices from '@/components/pages/PageServices'
 import PageCompetences from '@/components/pages/PageCompetences'
 import PageRealisations from '@/components/pages/PageRealisations'
 import PageContact from '@/components/pages/PageContact'
-import Footer from '@/components/Footer'
 
 export type PageId = 'home'|'services'|'competences'|'realisations'|'contact'
 
@@ -29,7 +28,6 @@ export default function Home() {
         <div style={{display: currentPage==='competences' ? 'block':'none'}}><PageCompetences goPage={goPage} /></div>        <div style={{display: currentPage==='realisations' ? 'block':'none'}}><PageRealisations goPage={goPage} /></div>
         <div style={{display: currentPage==='contact' ? 'block':'none'}}><PageContact goPage={goPage} /></div>
       </main>
-      <Footer goPage={goPage} />
     </>
   )
 }

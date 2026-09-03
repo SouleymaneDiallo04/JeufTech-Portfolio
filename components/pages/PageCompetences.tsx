@@ -96,7 +96,7 @@ const experiences = [
     'Prétraitement de données massives avec PySpark : nettoyage, gestion des manquants, normalisation et encodage sur plus de 50 000 startups.',
     'Analyse exploratoire (EDA) univariée, bivariée et multivariée pour identifier les facteurs clés du succès.',
     'Feature engineering : création de variables pertinentes .',
-    'Développement de modèles de classification adaptes au desequilibre de classes: d’abord binaire, puis multi‑classe.',
+    'Développement de modèles de classification adaptés au déséquilibre de classes: d’abord binaire, puis multi‑classe.',
     'Optimisation des modèles (Random Forest, XGBoost, LightGBM, ExtraTrees) avec validation croisée et recherche d’hyperparamètres.',
     'Mise en production du pipeline gagnant (LightGBM pour le binaire + ExtraTrees pour le multi‑classe) via une API Flask dockerisée et déployée sur AWS Elastic Beanstalk.',
     'Rédaction d’un rapport final documentant l’ensemble du cycle de vie du projet.'
@@ -104,7 +104,7 @@ const experiences = [
   techs: ['Python', 'Flask', 'Docker', 'AWS', 'Scikit-learn', 'Pandas', 'PySpark', 'Git'],
   achievements: [
     'Modèle binaire (actif/inactif) atteignant 90% de précision.',
-    'Modèle multi‑classe (4 statuts) atteignant 95% de précision avec une approche hiérarchique pour la gestion du deséquilibre.',
+    'Modèle multi‑classe (4 statuts) atteignant 95% de précision avec une approche hiérarchique pour la gestion du déséquilibre.',
     'Pipeline d’ingénierie des fonctionnalités ayant amélioré de 15% les scores par rapport aux features brutes.',
     'API Flask conteneurisée et déployée sur AWS.'
   ]
@@ -115,7 +115,7 @@ const experiences = [
   typeText: 'var(--c3)',
   date: '2024 — Présent',
   dotColor: 'var(--c3)',
-  title: 'Développeur Web',
+  title: 'Développeur Web Full Stack',
   org: 'JeüfTech',
   desc: 'Création de solutions web innovantes adaptées aux besoins du client – de l’idée au déploiement.',
   missions: [
@@ -253,7 +253,7 @@ function ExpCard({ exp }: { exp: typeof experiences[0] }) {
 /* ══ DONNÉES FORMATION ══ */
 const formations = [
   { year:'2022 — 2027', title:'Diplôme d\'Ingénieur : IA / Data Science - Systèmes Industriels', school:'ENSAM Meknès, Maroc', desc:'Formation en ML, deep learning, Big Data, MLOps et déploiement de systèmes intelligents en production.' },
-  { year:'2022 — 2024', title:'Classes Préparatoires Integrés', school:'ENSAM-Meknès, Maroc', desc:'Formation intensive en mathématiques, physique et sciences de l\'ingénieur. Base solide en algorithmique et analyse numérique.' },
+  { year:'2022 — 2024', title:'Classes Préparatoires Intégrées', school:'ENSAM-Meknès, Maroc', desc:'Formation intensive en mathématiques, physique et sciences de l\'ingénieur. Base solide en algorithmique et analyse numérique.' },
   { year:'2021', title:'Diplôme du Baccalaureat en Série S', school:'Lycée Cheikh Hamidou Kane de Mbao', desc:'Formation en série scientifique au Lycée de Mbao.' },
 ]
 
@@ -271,7 +271,7 @@ const groups = [
     { label: 'FastAPI', pct: 82, logo: <FAPI/> },
     { label: 'SQL / NoSQL', pct: 80, logo: <SQL_/> }
   ]
-},  { title:'Cloud & DevOps', type:'logos', items:[{ label: 'Docker', pct: 75, logo: <img src="/docker.jpeg" alt="Docker" style={{ width: 20, height: 20 }} /> },{label:'Git / GitHub',pct:90,logo:<GH_/>},{label:'AWS / Cloud',pct:65,logo:<AWS_/>},{ label: 'azure', pct: 75, logo: <img src="/azure.jpg" alt="azure" style={{ width: 20, height: 20 }} /> },{label:'Kubernetes',pct:58,logo:<K8S_/>}] },
+},  { title:'Cloud & DevOps', type:'logos', items:[{ label: 'Docker', pct: 75, logo: <img src="/docker.jpeg" alt="Docker" style={{ width: 20, height: 20 }} /> },{label:'Git / GitHub',pct:90,logo:<GH_/>},{label:'AWS / Cloud',pct:65,logo:<AWS_/>},{ label: 'Azure', pct: 75, logo: <img src="/azure.jpg" alt="Azure" style={{ width: 20, height: 20 }} /> },{label:'Kubernetes',pct:58,logo:<K8S_/>}] },
 ]
 
 /* ══ CERTIFICATIONS — structure exacte de la capture ══ */
@@ -347,6 +347,7 @@ export default function PageCompetences({ goPage }: { goPage: (id: PageId) => vo
 
   return (
     <>
+      <style>{`.sk-logo-ico svg, .sk-logo-ico img { width: 44px !important; height: 44px !important; object-fit: contain; }`}</style>
       <div className="page-hero">
         <div className="sec-badge" style={{margin:'0 auto 18px'}}><span className="sec-badge-dot"/>Mon Parcours</div>
         <div className="sec-title" style={{textAlign:'center'}}>Expérience & <em>Compétences</em></div>
@@ -460,7 +461,7 @@ export default function PageCompetences({ goPage }: { goPage: (id: PageId) => vo
                 <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(140px,1fr))",gap:18,maxWidth:960,margin:"0 auto"}}>
                   {g.items.map((s: any) => (
                     <div key={s.label} style={{display:"flex",flexDirection:"column",alignItems:"center",gap:8,padding:"16px 10px",textAlign:"center"}}>
-                      <div style={{transform:"scale(3)",transformOrigin:"center",margin:"16px 0"}}>{s.logo}</div>
+                      <div className="sk-logo-ico" style={{margin:"14px 0",display:"flex",alignItems:"center",justifyContent:"center"}}>{s.logo}</div>
                       <span style={{fontSize:13,fontWeight:700,color:"var(--text)",fontFamily:"var(--fb)",marginTop:4}}>{s.label}</span>
                       <div style={{width:"100%",height:5,background:"var(--borderx)",borderRadius:3,overflow:"hidden"}}>
                         <div style={{

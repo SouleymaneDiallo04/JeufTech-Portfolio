@@ -21,14 +21,14 @@ export const projets = [
   {
     id: 2,
     num: '02',
-    title: 'AiThinkDesign – Plateforme IA Multi-Agents de Prototypage Digitale',
+    title: 'AiThinkDesign – Plateforme IA Multi-Agents de Prototypage Digital',
     cat: 'ia-web',
-    status: 'Termine',
+    status: 'Terminé',
     image: '/aithinkdesign.jpeg',
     dur: '4 Mois',
     type: '3 Personnes',
     desc: `AiThinkDesign est une plateforme SaaS B2B conçue et vendue à l'entreprise SigmaXIs pour résoudre un problème structurel de l'industrie : le cycle de conception produit, encore largement artisanal, mobilise des semaines d'expertise humaine dispersée avant de produire un premier prototype exploitable. Notre solution réduit ce cycle à quelques heures en orchestrant plus de 30 agents spécialisés qui reproduisent, en parallèle et en continu, la démarche complète d'un bureau d'études pluridisciplinaire. Six personas créatives explorent l'espace des solutions, la méthode TRIZ résout les contradictions techniques identifiées, le Six Sigma valide la robustesse des concepts retenus, et treize analyses DFX sectorielles, couvrant l'aéronautique, l'automobile, le médical, l'électronique et l'ameublement, pour évaluer la fabricabilité sous tous les angles. La plateforme génère en sortie l'ensemble des livrables attendus par un décideur industriel : nomenclature chiffrée avec prix fournisseurs réels, coût de revient décomposé, plan de validation, visualisation 3D du prototype et exports professionnels prêts pour un comité de direction. L'intégralité du raisonnement est traçable et sourcée grâce à un moteur de connaissances sectoriel alimenté par les normes, brevets et retours d'expérience du domaine. Le résultat : un passage accéléré et maîtrisé de l’idée brute au prototype validé, en une fraction du temps habituel, et ce, sans ne rien perdre de la rigueur industrielle, ni de dépendre d’une expertise humaine dispersée.`,
-    stack: 'Orchestration de 30+ agents IA en temps réel·Résolution de contradictions téchniques par la méthodologie TRIZ·Idéation multi-personas en parallèle·13 analyses DFx par secteur·Nomenclature chiffrée avec prix fournisseurs réels·Visualisation 3D et fichier CAO exportable (STEP/STL)', 
+    stack: 'Orchestration de 30+ agents IA en temps réel·Résolution de contradictions techniques par la méthodologie TRIZ·Idéation multi-personas en parallèle·13 analyses DFx par secteur·Nomenclature chiffrée avec prix fournisseurs réels·Visualisation 3D et fichier CAO exportable (STEP/STL)', 
     tech: 'FastAPI·LangGraph·FreeCAD API·Next.js·TRIZ API·LangChain·PostgreSQL·CAO 3D',
     demo: '#',
     github: 'https://github.com/SouleymaneDiallo04/AITHINKDESIGN',
@@ -111,7 +111,7 @@ export const projets = [
     image: '/chute2.jpg',
     dur: '3 Mois',
     type: '2 Personnes',
-    desc: `Ce projet n'est pas une simple solution de télésurveillance : c'est un écosystème d'IA révolutionnaire conçu pour garantir la sécurité et la dignité des personnes âgées et des patients à risque. Le système intègre trois modèles d’IA de pointe : une détection de chûtes en temps réel, une détection de somnolence par analyse faciale et une prédiction de chûtes par analyse de séquences vidéo pour anticiper l'accident.  L'application, fluide et interactive, envoie des alertes instantanées en cas de risque imminent, offrant ainsi une véritable bouée de sauvetage technologique.`,
+    desc: `Ce projet n'est pas une simple solution de télésurveillance : c'est un écosystème d'IA révolutionnaire conçu pour garantir la sécurité et la dignité des personnes âgées et des patients à risque. Le système intègre trois modèles d’IA de pointe : une détection de chutes en temps réel, une détection de somnolence par analyse faciale et une prédiction de chutes par analyse de séquences vidéo pour anticiper l'accident.  L'application, fluide et interactive, envoie des alertes instantanées en cas de risque imminent, offrant ainsi une véritable bouée de sauvetage technologique.`,
     stack: 'Détection de chutes en temps réel (YOLOv5)·Prédiction de chutes·Détection de somnolence·Interface utilisateur interactive·Alertes en temps réel·Architecture hybride CNN‑LSTM',
     tech: 'Python·YOLOv5·PyTorch·TensorFlow·Keras·OpenCV·MediaPipe·Streamlit',
     demo: 'https://computer-vision2.readthedocs.io/en/latest/',
@@ -197,15 +197,6 @@ export const projets = [
     imgBg: '#0D1B2A',
     bg: 'rgba(0, 212, 255, 0.1)',
   },
-]
-
-export const certifications = [
-  { ico: '🏅', name: 'Machine Learning Specialization', issuer: 'Coursera — Andrew Ng', org: 'Coursera — DeepLearning.AI', year: '2024', status: 'Vérifié', score: '98/100', desc: 'Spécialisation en 3 cours couvrant supervised learning, unsupervised learning et reinforcement learning. Projets pratiques en Python avec TensorFlow et Scikit-learn.', link: 'https://coursera.org' },
-  { ico: '☁️', name: 'AWS Cloud Practitioner', issuer: 'Amazon Web Services', org: 'Amazon Web Services', year: '2025', status: 'Vérifié', score: '890/1000', desc: 'Certification fondamentale AWS couvrant les services cloud, la sécurité, l\'architecture et la facturation. Valide une compréhension des services AWS et du déploiement cloud.', link: 'https://aws.amazon.com/certification' },
-  { ico: '🤗', name: 'NLP with Transformers', issuer: 'Hugging Face', org: 'Hugging Face', year: '2024', status: 'Vérifié', score: 'Mention excellente', desc: 'Formation avancée sur les architectures Transformer, BERT, GPT et leurs applications en NLP. Fine-tuning de modèles pré-entraînés et déploiement d\'API.', link: 'https://huggingface.co/learn' },
-  { ico: '📊', name: 'Google Data Analytics', issuer: 'Google / Coursera', org: 'Google / Coursera', year: '2024', status: 'Vérifié', score: '97/100', desc: 'Programme de 8 cours couvrant l\'analyse de données avec SQL, R, Tableau et Google Sheets. Projet capstone complet d\'analyse de données réelles.', link: 'https://grow.google/certificates/data-analytics' },
-  { ico: '🎓', name: 'Diplôme Ingénieur IA', issuer: 'École d\'Ingénieurs', org: 'École d\'Ingénieurs, Maroc', year: '2026', status: 'En cours', score: '—', desc: 'Diplôme d\'ingénieur spécialité Intelligence Artificielle et Data Science. Formation de 5 ans incluant ML, DL, Big Data, MLOps et projets industriels.', link: '#' },
-  { ico: '🐳', name: 'Docker & Kubernetes', issuer: 'Udemy — KodeKloud', org: 'Udemy — KodeKloud', year: '2025', status: 'Vérifié', score: 'Complété', desc: 'Formation complète sur la containerisation Docker et l\'orchestration Kubernetes. Docker Compose, volumes, réseaux, Helm charts et déploiement en production.', link: 'https://kodekloud.com' },
 ]
 
 export const services = [
