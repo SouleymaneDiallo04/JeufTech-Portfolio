@@ -67,7 +67,7 @@ const experiences = [
   desc: "Conception et développement d'une plateforme web B2B qui transforme les 15 millions d'entreprises du registre public français en un outil de prospection commerciale, doté d'une IA générative pour les résumés et argumentaires de vente et d'une recommandation intelligente d'entreprises similaires.",
   missions: [
     "Développement intégral de la plateforme : API back-end (Laravel / PHP) et application front-end (React, TypeScript), avec authentification, double authentification (2FA) et permissions par rôle (administrateur / manager / commercial).",
-    "Collecte des coordonnées manquantes du registre : croisement d'OpenStreetMap et d'un crawler web pour récupérer téléphones, e-mails, réseaux sociaux et avis publiés",
+    "Collecte des coordonnées manquantes du registre : croisement d'OpenStreetMap et d'un crawler web pour récupérer téléphones, e-mails, réseaux sociaux et avis publiés.",
     "Moteur de recherche et cartographie : recherche multicritères sur plus d'un million de fiches (secteur d'activité, zone géographique, effectif, ancienneté), carte interactive et sélection par rayon autour d'une adresse.",
     "Moteur de scoring déterministe et explicable : indice de réputation, score commercial et paliers A/B/C/D, chaque note justifiée par ses facteurs.",
     "Couche d'IA générative : résumé d'entreprise et argumentaire d'approche personnalisés selon le canal (courrier électronique ou script d'appel téléphonique), et recommandation de prospects similaires par recherche vectorielle (embeddings, KNN cosinus).",
@@ -75,10 +75,9 @@ const experiences = [
   ],
   techs: ['Laravel', 'React / TypeScript', 'PostgreSQL', 'Docker', 'PgVector', 'Redis / Horizon', 'Tailwind CSS', 'CI/CD'],
   achievements: [
-    "Chaîne d'ingestion à l'échelle nationale : 15 millions d'établissements traités par lecture en flux sans charger le fichier en mémoire, plus d'1 million géolocalisés dont 335 000 indexées pour la recommandation d'entreprises similaires.",
+    "Chaîne d'ingestion à l'échelle nationale : 15 millions d'établissements traités par lecture en flux sans charger le fichier en mémoire, plus d'1 million géolocalisés dont 335 000 indexés pour la recommandation d'entreprises similaires.",
     "Couverture obtenue sans achat de données : base construite exclusivement à partir de sources ouvertes, là où l'équivalent par API commerciale était chiffré à 19 000 $ pour un seul département.",
     "Recherche par ressemblance opérationnelle : retrouver les jumeaux commerciaux d'un client parmi les fiches indexées, sans contrainte géographique.",
-    "Faille de conformité RGPD détectée en revue : un contenu généré restait accessible après exercice du droit d'opposition ; corrigé et verrouillé par un test de non-régression.",
     "Robustesse de niveau production : diagnostic et correction d'une fuite mémoire sur le traitement massif d'embeddings, et fiabilisation des appels d'IA sous limitation de débit, ramenant un taux d'échec de 38 % à un niveau stable.",
     "Livraison intégrale en deux mois : cadrage, architecture, développement, tests automatisés, mise en conteneurs, démonstration et déploiement.",
   ],
