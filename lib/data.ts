@@ -203,7 +203,7 @@ export const projets = [
     title: 'E-commerce Purchase Propensity – Prédire l\'Achat à partir du Parcours Client',
     cat: 'ia-web',
     status: 'Terminé',
-    image: '/ecommerce.png',
+    image: '/E-commerce.webp',
     dur: '1 Mois',
     type: 'Personnel',
     desc: `La prédiction d'achat en ligne est un défi majeur du marketing digital en raison de l'extrême rareté des acheteurs et du caractère trompeur des signaux de navigation : un site e-commerce reçoit énormément de visiteurs mais 1 à 2 % seulement achètent, alors que chaque action marketing (code promo, livraison offerte ou relance commerciale) coûte de l'argent. Arroser tout le monde revient à gaspiller, ne rien faire, à perdre des ventes, et la véritable question devient donc : sur qui dépenser, et où dépenser ?
@@ -216,9 +216,9 @@ L'ensemble est livré comme un service de production complet, avec API de scorin
     github: 'https://github.com/SouleymaneDiallo04/Ecommerce-Purchase-Propensity',
     icon: '🎯',
     imgPos: '50% 50%',
-    imgFit: 'cover' as const,
-    imgBg: '#0d4650',
-    bg: 'rgba(13, 70, 80, 0.1)',
+    imgFit: 'scale-down' as const,
+    imgBg: '#ffffff',
+    bg: 'rgba(240, 130, 50, 0.1)',
   },
 ]
 
