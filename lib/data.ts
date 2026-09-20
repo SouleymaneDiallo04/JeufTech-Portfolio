@@ -197,6 +197,26 @@ export const projets = [
     imgBg: '#0D1B2A',
     bg: 'rgba(0, 212, 255, 0.1)',
   },
+  {
+    id: 11,
+    num: '11',
+    title: 'E-commerce Purchase Propensity – Prédire l\'Achat à partir du Parcours Client',
+    cat: 'ia-web',
+    status: 'Terminé',
+    image: '/ecommerce.png',
+    dur: '1 Mois',
+    type: 'Personnel',
+    desc: `La prédiction d'achat en ligne est un défi majeur du marketing digital en raison de l'extrême rareté des acheteurs et du caractère trompeur des signaux de navigation : un site e-commerce reçoit énormément de visiteurs mais 1 à 2 % seulement achètent, alors que chaque action marketing (publicité de retargeting, code promo, livraison offerte ou relance commerciale) coûte de l'argent. Arroser tout le monde revient à gaspiller, ne rien faire revient à perdre des ventes, et la véritable question métier devient donc : sur qui dépenser, et où dépenser ? Ce projet transforme des sessions Google Analytics brutes, interrogées en SQL sur BigQuery, en réponses à ces deux questions. Il reconstitue le parcours de chaque visiteur hit par hit, dresse le tunnel de conversion pour localiser précisément où les clients décrochent, et attribue à chacun un score de propension d'achat issu de trois modèles complémentaires : un modèle in-session sur les premiers instants de la visite, un modèle cross-session fondé sur l'historique des visites passées du client, et un réseau de neurones récurrent qui lit l'ordre des pages consultées. Ce score sert alors à personnaliser le traitement plutôt qu'à simplement classer : un visiteur très bien scoré achètera de toute façon et ne justifie pas qu'on brûle une remise et un visiteur au score intermédiaire est précisément celui qu'une remise, une livraison offerte ou une relance fera basculer. La remise va ainsi là où elle change l'issue. Une attribution par chaînes de Markov répond à la seconde question en mesurant l'impact réel de chaque canal d'acquisition, révélant lesquels génèrent vraiment les conversions et lesquels s'en attribuent le mérite. Un simulateur de profit permet enfin au décideur de régler lui-même la valeur d'un client et le coût d'une action, et ainsi voir l'optimum de ciblage se déplacer en direct. L'ensemble est livré comme un service de production complet, avec API de scoring, dashboard Streamlit déployé, conteneurisation Docker, tests automatisés et suivi MLflow.`,
+    stack: 'Scoring de propension sans fuite·3 modèles complémentaires (in-session, cross-session, GRU)·Attribution des canaux par chaîne de Markov·Simulateur de profit interactif·Validation croisée temporelle·Calibration isotonic·Seuil de décision coût/gain·API FastAPI et dashboard Streamlit déployé',
+    tech: 'Python·SQL·BigQuery·LightGBM·PyTorch·FastAPI·Streamlit·Docker·MLflow',
+    demo: 'https://ecommerce-purchase-propensity-jch32sxxye7yp4wurctwwm.streamlit.app/',
+    github: 'https://github.com/SouleymaneDiallo04/Ecommerce-Purchase-Propensity',
+    icon: '🎯',
+    imgPos: '50% 50%',
+    imgFit: 'cover' as const,
+    imgBg: '#0d4650',
+    bg: 'rgba(13, 70, 80, 0.1)',
+  },
 ]
 
 export const services = [
