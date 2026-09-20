@@ -659,6 +659,7 @@ export default function PageRealisations({ goPage }: { goPage: (id: PageId) => v
           color: var(--muted2);
           line-height: 1.8;
           margin: 0 0 14px;
+          white-space: pre-line;
         }
         .pdp-section { margin-bottom: 14px; }
         .pdp-section-label {
