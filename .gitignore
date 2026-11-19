@@ -40,3 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env.local
+.gstack/
+
+# Fichiers personnels — NE JAMAIS publier (repo public)
+/.claude/
+/Bourses/
+/cv/
+/cv-sources/
